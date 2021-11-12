@@ -1,10 +1,5 @@
 # In-Door Autonomous Navigation Robot
 
-Main branch is purposely kept empty.
-Checkout 'Gazebo' branch for Simulation only Codes.
-Further branches will be added as the project progresses.
-
-## Project Information:
 ### It is an Autonomous Robot similar to turtlebot3 but manufactured with locally available components. 
 
 ## The Sensor Fusion consists of 
@@ -21,3 +16,9 @@ Further branches will be added as the project progresses.
 ### Hector Slam
 ### Robot localization
 ### URDF for Gazebo (Imported from Solidworks)
+
+##
+##### Main branch is purposely kept empty.
+##### Checkout 'Gazebo' branch for Simulation only Codes.
+##### Checkout 'Arduino_Encoder' branch for Arduino-ROS Code (ROS Serial)
+##### Further branches will be added as the project progresses.
