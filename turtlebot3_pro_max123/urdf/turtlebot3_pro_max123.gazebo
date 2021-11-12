@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<robot>
+
+  <!-- ROS Control plugin for Gazebo -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/agribot</robotNamespace>
+      <legacyModeNS>true</legacyModeNS>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <alwaysOn>false</alwaysOn>
+    </plugin>
+  </gazebo>
+
+<!-- <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/agribot</robotNamespace>
+      <robotSimType>steer_bot_hardware_gazebo/SteerBotHardwareGazebo</robotSimType>
+    </plugin>
+  </gazebo>  -->
+
+  <gazebo>
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>50.0</updateRate>
+        <bodyName>Ground Floor</bodyName>
+        <topicName>pose</topicName>
+        <gaussianNoise>0.01</gaussianNoise>
+        <frameName>world</frameName>
+        <xyzOffsets>0 0 0</xyzOffsets>
+        <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>false</legacyMode>
+      <alwaysOn>false</alwaysOn>
+      <updateRate>30</updateRate>
+      <leftJoint>Left_Wheel_Joint</leftJoint>
+      <rightJoint>Right_Wheel_Joint</rightJoint>
+      <wheelSeparation>0.343</wheelSeparation>
+      <wheelDiameter>0.11198</wheelDiameter>
+      <torque>100000</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>Ground Floor</robotBaseFrame>
+      <publishWheelTF>true</publishWheelTF>
+      <publishOdomTF>true</publishOdomTF>
+      <publishWheelJointState>true</publishWheelJointState>
+      <wheelAcceleration>1</wheelAcceleration>
+      <publishTf>1</publishTf>
+      <wheelTorque>100000</wheelTorque>
+      <publishCmd>true</publishCmd>
+      <odometrySource>0</odometrySource> 
+      <rosDebugLevel>false</rosDebugLevel>
+      <broadcastTF>true</broadcastTF>
+    </plugin>
+  </gazebo>
+
+  <!-- Gazebo plugin for ROS Control -->
+  <!--
+  <gazebo reference="base_link">
+      <material>Gazebo/Orange</material>
+    </gazebo>
+  <gazebo reference="left_leg">
+      <material>Gazebo/Blue</material>
+    </gazebo>
+  <gazebo reference="right_leg">
+      <material>Gazebo/Blue</material>
+    </gazebo>
+  <gazebo reference="back_c_r">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  <gazebo reference="back_c_l">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  <gazebo reference="front_m_r">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  <gazebo reference="front_m_l">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  <gazebo reference="back_w_l">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  <gazebo reference="back_w_r">
+      <material>Gazebo/Grey</material>
+    </gazebo>
+  <gazebo reference="front_w_r">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="front_w_l">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+-->
+<!--   <gazebo reference="back_cl_j">
+      <dynamics damping="1"/>
+    </gazebo>
+  <gazebo reference="back_cr_j">
+      <dynamics damping="1"/>
+    </gazebo> -->
+
+  <!-- depth camera -->
+  <gazebo reference="Kinect_Camera">
+    <sensor type="camera" name="rgb_camera">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <pose>0.2 0.02 -0.005 -1.57 0 0</pose>
+        <horizontal_fov>1</horizontal_fov>
+        <vertical_fov>1</vertical_fov>
+        <image>
+          <width>1280</width>
+          <height>720</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>turtlebot3_pro_max123/rgb_camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>Kinect_Camera</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="MPU9250">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu/data</topicName>
+        <bodyName>MPU9250</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>MPU9250</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+ 
+
+</robot>

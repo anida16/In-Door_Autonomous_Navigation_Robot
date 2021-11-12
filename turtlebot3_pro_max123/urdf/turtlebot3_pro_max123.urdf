@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="turtlebot3_pro_max123">
+  <link
+    name="Ground Floor">
+    <inertial>
+      <origin
+        xyz="4.70304717569314E-19 -1.51383696413054E-18 0.006"
+        rpy="0 0 0" />
+      <mass
+        value="0.306175115098668" />
+      <inertia
+        ixx="0.00188258342887214"
+        ixy="-1.06344407501349E-19"
+        ixz="-9.60175745415004E-23"
+        iyy="0.0018791495675708"
+        iyz="1.14475544064493E-19"
+        izz="0.00375438479368057" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Ground Floor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Ground Floor_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Ground_Floor_Vertical_Links">
+    <inertial>
+      <origin
+        xyz="-0.1073 -8.32667268468867E-17 -0.1073"
+        rpy="0 0 0" />
+      <mass
+        value="0.0873427258771282" />
+      <inertia
+        ixx="0.000110813104969509"
+        ixy="1.68389366232844E-08"
+        ixz="1.07557713438902E-21"
+        iyy="1.60586974010864E-05"
+        iyz="-1.68389366232222E-08"
+        izz="0.000110813104969509" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Ground_Floor_Vertical_Links.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Ground_Floor_Vertical_Links_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ground_Floor_Vertical_Links_Joint"
+    type="fixed">
+    <origin
+      xyz="0.1073 0.1073 0.0720000000000001"
+      rpy="1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Ground_Floor_Vertical_Links" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="First_Floor">
+    <inertial>
+      <origin
+        xyz="-7.86566268856647E-18 0.00600000000000023 3.94665955637125E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.306175115098668" />
+      <inertia
+        ixx="0.00188258342887214"
+        ixy="5.77401645268386E-24"
+        ixz="-9.25547897022068E-20"
+        iyy="0.00375438479368056"
+        iyz="7.06684763120197E-19"
+        izz="0.0018791495675708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/First_Floor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/First_Floor_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="First_Floor_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.1073 0.06 -0.1073"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="Ground_Floor_Vertical_Links" />
+    <child
+      link="First_Floor" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="First_Floor_Vertical_Links">
+    <inertial>
+      <origin
+        xyz="0.0974764231260202 -3.60822483003176E-16 0.0974766645992801"
+        rpy="0 0 0" />
+      <mass
+        value="0.054275044407846" />
+      <inertia
+        ixx="4.94997932361172E-05"
+        ixy="8.41946831165636E-09"
+        ixz="0"
+        iyy="9.9789824108148E-06"
+        iyz="8.41946831165525E-09"
+        izz="4.94997932361172E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/First_Floor_Vertical_Links.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/First_Floor_Vertical_Links_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="First_Floor_Vertical_Links_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0619999999999999 -0.122039487757862"
+      rpy="0 -0.785398163397447 -3.14159265358979" />
+    <parent
+      link="First_Floor" />
+    <child
+      link="First_Floor_Vertical_Links" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Second_Floor">
+    <inertial>
+      <origin
+        xyz="-4.59978908314626E-17 0.00600000000000059 2.12960309672514E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.306175115098668" />
+      <inertia
+        ixx="0.00188258342887214"
+        ixy="1.06184538248409E-18"
+        ixz="-1.15660529150226E-20"
+        iyy="0.00375438479368057"
+        iyz="2.28899169636148E-19"
+        izz="0.0018791495675708" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Second_Floor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Second_Floor_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Second_Floor_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0862949493661165 -0.05 0.0862949493661169"
+      rpy="3.14159265358979 0.785398163397447 0" />
+    <parent
+      link="First_Floor_Vertical_Links" />
+    <child
+      link="Second_Floor" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="MPU9250">
+    <inertial>
+      <origin
+        xyz="-0.118217830949175 -0.00104259470994378 -0.162868160967249"
+        rpy="0 0 0" />
+      <mass
+        value="0.000628851677164537" />
+      <inertia
+        ixx="2.84177895500367E-08"
+        ixy="-3.75278292675917E-14"
+        ixz="4.57750732123504E-14"
+        iyy="3.75953504496454E-08"
+        iyz="-4.2587819218147E-14"
+        izz="1.06612939030681E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/MPU9250.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/MPU9250_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="MPU9250_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0625950000000004 0.0295700000000001 -0.0751399999999997"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="Second_Floor" />
+    <child
+      link="MPU9250" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RP_LiDAR_A1">
+    <inertial>
+      <origin
+        xyz="-0.0210078094365039 0.0106966269502565 -9.1634219840406E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.3324811049663" />
+      <inertia
+        ixx="0.000615842284246016"
+        ixy="-0.000158500451241491"
+        ixz="7.98987037271028E-07"
+        iyy="0.0010983934471466"
+        iyz="-3.10024618929427E-06"
+        izz="0.000961697044037426" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/RP_LiDAR_A1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/RP_LiDAR_A1_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RP_LiDAR_A1_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0366 0.0142499999999999"
+      rpy="0 -1.5707963267949 0" />
+    <parent
+      link="Second_Floor" />
+    <child
+      link="RP_LiDAR_A1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Kinect_Base">
+    <inertial>
+      <origin
+        xyz="-0.00425918193058036 0.00943012756099207 -0.184943395044608"
+        rpy="0 0 0" />
+      <mass
+        value="0.100919540065879" />
+      <inertia
+        ixx="3.77313887602913E-05"
+        ixy="-6.5453153474285E-12"
+        ixz="1.045286227031E-10"
+        iyy="8.33159866791771E-05"
+        iyz="-2.65982400359128E-10"
+        izz="5.25438545962697E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Kinect_Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Kinect_Base_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Kinect_Base_Joint"
+    type="fixed">
+    <origin
+      xyz="0.00212959588475317 0.0125 0.0924719063318718"
+      rpy="0 0 0" />
+    <parent
+      link="First_Floor" />
+    <child
+      link="Kinect_Base" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Kinect_Camera">
+    <inertial>
+      <origin
+        xyz="-0.00473113870691642 0.0188109981011434 -0.181056666701459"
+        rpy="0 0 0" />
+      <mass
+        value="0.545535346057759" />
+      <inertia
+        ixx="0.000225893798697897"
+        ixy="3.46017963839556E-08"
+        ixz="-2.56609747502066E-06"
+        iyy="0.0028794245905872"
+        iyz="-1.47528550669068E-07"
+        izz="0.00278997231042472" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Kinect_Camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Kinect_Camera_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Kinect_Camera_Joint"
+    type="fixed">
+    <origin
+      xyz="0.000138403787494056 0.034 -0.00247190633187176"
+      rpy="0 0 0" />
+    <parent
+      link="Kinect_Base" />
+    <child
+      link="Kinect_Camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Front_Castor_Wheel">
+    <inertial>
+      <origin
+        xyz="-0.254 2.88450778881281E-17 0.00452901974820012"
+        rpy="0 0 0" />
+      <mass
+        value="0.00176851508275407" />
+      <inertia
+        ixx="7.19459865531897E-08"
+        ixy="1.04003421744339E-22"
+        ixz="4.19880617968765E-23"
+        iyy="7.1945986553189E-08"
+        iyz="2.56102315964772E-22"
+        izz="9.78322787119691E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Front_Castor_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Front_Castor_Wheel_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Castor_Wheel_Joint"
+    type="fixed">
+    <origin
+      xyz="0 -0.127 0"
+      rpy="3.14159265358979 0 -1.5707963267949" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Front_Castor_Wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Front_Castor_Ball">
+    <inertial>
+      <origin
+        xyz="0.254 0 2.01637250299425E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.000523598775598299" />
+      <inertia
+        ixx="5.23598775598299E-09"
+        ixy="-3.25208566183215E-57"
+        ixz="9.3549344069031E-52"
+        iyy="5.23598775598299E-09"
+        iyz="4.44108029208484E-35"
+        izz="5.23598775598299E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Front_Castor_Ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Front_Castor_Ball_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_Castor_Ball_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0119999998991814"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="Front_Castor_Wheel" />
+    <child
+      link="Front_Castor_Ball" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Back_Castor_Wheel">
+    <inertial>
+      <origin
+        xyz="-1.99732395248982E-17 0.254 0.00452901974820007"
+        rpy="0 0 0" />
+      <mass
+        value="0.00176851508275407" />
+      <inertia
+        ixx="7.19459865531896E-08"
+        ixy="1.02595151896986E-22"
+        ixz="-2.99121332209767E-23"
+        iyy="7.19459865531889E-08"
+        iyz="2.61586404997334E-22"
+        izz="9.78322787119691E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Back_Castor_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Back_Castor_Wheel_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Castor_Wheel_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0.127 0"
+      rpy="-3.14159265358979 0 0" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Back_Castor_Wheel" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Back_Castor_Ball">
+    <inertial>
+      <origin
+        xyz="-3.5808674788745E-17 -0.253999999899181 4.0327718595079E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.000523598775598299" />
+      <inertia
+        ixx="5.23598775598299E-09"
+        ixy="-5.16987882845663E-26"
+        ixz="-2.06795153138256E-25"
+        iyy="5.23598775598299E-09"
+        iyz="5.16987882845642E-26"
+        izz="5.23598775598299E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Back_Castor_Ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Back_Castor_Ball_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Back_Castor_Ball_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0120000001008186"
+      rpy="-3.14159265358978 0 0" />
+    <parent
+      link="Back_Castor_Wheel" />
+    <child
+      link="Back_Castor_Ball" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left_Encoder_Angle_Plate">
+    <inertial>
+      <origin
+        xyz="4.00204699044691E-16 0.0147826849637491 -0.0134823723164557"
+        rpy="0 0 0" />
+      <mass
+        value="0.0219254603042376" />
+      <inertia
+        ixx="1.11096889660457E-05"
+        ixy="-3.62497572674904E-21"
+        ixz="1.9290648439196E-20"
+        iyy="1.2452291796096E-05"
+        iyz="-3.21812145037989E-06"
+        izz="1.24772407573447E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_Angle_Plate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_Angle_Plate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Encoder_Angle_Plate_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0739999999999819 0 0.012"
+      rpy="-3.14159265358979 0 -1.5707963267949" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Left_Encoder_Angle_Plate" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left_Encoder">
+    <inertial>
+      <origin
+        xyz="-2.07796140537508E-10 -9.19971150234455E-05 0.0180755929019836"
+        rpy="0 0 0" />
+      <mass
+        value="0.0410483914806997" />
+      <inertia
+        ixx="8.2840083563058E-06"
+        ixy="-1.57526967029876E-13"
+        ixz="-3.75754148520815E-14"
+        iyy="8.18832869190217E-06"
+        iyz="-4.56008928061674E-08"
+        izz="7.30004066465015E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Encoder_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0.044 -0.0270000000000001"
+      rpy="1.5707963267949 -0.0872664625996489 0" />
+    <parent
+      link="Left_Encoder_Angle_Plate" />
+    <child
+      link="Left_Encoder" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left_Encoder_Shaft">
+    <inertial>
+      <origin
+        xyz="4.77048955893622E-16 4.16333634234434E-17 0.00999999999999997"
+        rpy="0 0 0" />
+      <mass
+        value="0.000565486677646163" />
+      <inertia
+        ixx="2.01219009462426E-08"
+        ixy="-2.06795153138257E-25"
+        ixz="-9.60777382812035E-23"
+        iyy="2.01219009462426E-08"
+        iyz="3.74750982407412E-24"
+        izz="2.54469004940773E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_Shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_Shaft_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Encoder_Shaft_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.033"
+      rpy="0 0 -0.034866" />
+    <parent
+      link="Left_Encoder" />
+    <child
+      link="Left_Encoder_Shaft" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Left_Encoder_Coupler">
+    <inertial>
+      <origin
+        xyz="7.63278329429795E-17 0 0.0122557411273487"
+        rpy="0 0 0" />
+      <mass
+        value="0.00601929152427804" />
+      <inertia
+        ixx="4.32085946695518E-07"
+        ixy="0"
+        ixz="3.33799863767204E-22"
+        iyy="4.32085946695518E-07"
+        iyz="2.35146849594771E-22"
+        izz="3.01768038535058E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_Coupler.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Encoder_Coupler_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Encoder_Coupler_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.039"
+      rpy="-3.1416 0 0.38751" />
+    <parent
+      link="Left_Encoder_Shaft" />
+    <child
+      link="Left_Encoder_Coupler" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Left_Motor_Shaft">
+    <inertial>
+      <origin
+        xyz="0.0329232788564365 -5.76441713439138E-05 -2.82409647163195E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00321285894925607" />
+      <inertia
+        ixx="2.54143918564532E-08"
+        ixy="-4.70845713561819E-09"
+        ixz="-7.37534175746627E-22"
+        iyy="1.12774288289305E-06"
+        iyz="-6.03695651454272E-24"
+        izz="1.12717659926779E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor_Shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor_Shaft_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Motor_Shaft_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.055"
+      rpy="2.7017 -1.5708 0" />
+    <parent
+      link="Left_Encoder_Coupler" />
+    <child
+      link="Left_Motor_Shaft" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Left_Wheel">
+    <inertial>
+      <origin
+        xyz="3.36536354339501E-15 0.00070994558924628 -3.30291349825984E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.11502952485387" />
+      <inertia
+        ixx="0.000119851353018076"
+        ixy="-1.15256456899608E-18"
+        ixz="-1.03380032399208E-15"
+        iyy="0.000215063064031578"
+        iyz="-1.31378331092281E-18"
+        izz="0.000119851353015825" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Wheel_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Wheel_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.0145 0 0"
+      rpy="0 -0.43293 -1.5708" />
+    <parent
+      link="Left_Motor_Shaft" />
+    <child
+      link="Left_Wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Left_Motor_Plate">
+    <inertial>
+      <origin
+        xyz="0.0142230422275223 0.0140305783109308 -5.33867520842575E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228522301370466" />
+      <inertia
+        ixx="1.26656359081654E-05"
+        ixy="3.36042653670861E-06"
+        ixz="1.47286160264012E-21"
+        iyy="1.25927964265988E-05"
+        iyz="1.03529500452339E-20"
+        izz="1.14147397394386E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor_Plate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor_Plate_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Motor_Plate_Joint"
+    type="fixed">
+    <origin
+      xyz="0.14 0 0.012"
+      rpy="1.5707963267949 0 -3.14159265358979" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Left_Motor_Plate" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left_Motor">
+    <inertial>
+      <origin
+        xyz="-2.08906514400806E-10 0.0342490788500103 -0.0206801558865177"
+        rpy="0 0 0" />
+      <mass
+        value="0.148158669748596" />
+      <inertia
+        ixx="0.000166100474730073"
+        ixy="-1.94433964867423E-11"
+        ixz="2.59596120614609E-13"
+        iyy="8.88051318091148E-05"
+        iyz="3.88331046293828E-05"
+        izz="0.000139077222017456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Motor_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0109999999999999 0.0270000000000001 0"
+      rpy="0 -1.5707963267949 0" />
+    <parent
+      link="Left_Motor_Plate" />
+    <child
+      link="Left_Motor" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left_Motor_Shaft_1">
+    <inertial>
+      <origin
+        xyz="0.0374232788564366 -5.76441713438167E-05 -2.65173308852266E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00321285894925607" />
+      <inertia
+        ixx="2.54143918564532E-08"
+        ixy="-4.70845713561819E-09"
+        ixz="-7.37534175746627E-22"
+        iyy="1.12774288289305E-06"
+        iyz="-6.03695651454272E-24"
+        izz="1.12717659926779E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor_Shaft_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Left_Motor_Shaft_1_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Motor_Shaft_1_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0324999999999999"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="Left_Motor" />
+    <child
+      link="Left_Motor_Shaft_1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Right_Encoder_Angle_Plate">
+    <inertial>
+      <origin
+        xyz="1.27979760641119E-17 0.0147826849637491 -0.0134823723164558"
+        rpy="0 0 0" />
+      <mass
+        value="0.0219254603042377" />
+      <inertia
+        ixx="1.11096889660458E-05"
+        ixy="-4.16300094428234E-22"
+        ixz="-5.96614307713464E-21"
+        iyy="1.2452291796096E-05"
+        iyz="-3.2181214503799E-06"
+        izz="1.24772407573447E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_Angle_Plate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_Angle_Plate.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Encoder_Angle_Plate_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.0739999999999999 0 0.012"
+      rpy="-3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Right_Encoder_Angle_Plate" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Right_Encoder">
+    <inertial>
+      <origin
+        xyz="-2.07795215062534E-10 -9.19971150235843E-05 0.0180755929019836"
+        rpy="0 0 0" />
+      <mass
+        value="0.0410483914806997" />
+      <inertia
+        ixx="8.28400835630581E-06"
+        ixy="-1.57526966659299E-13"
+        ixz="-3.75754073472705E-14"
+        iyy="8.18832869190217E-06"
+        iyz="-4.56008928061678E-08"
+        izz="7.30004066465015E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Encoder_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0.044 -0.027"
+      rpy="1.5707963267949 -0.0872664625996818 0" />
+    <parent
+      link="Right_Encoder_Angle_Plate" />
+    <child
+      link="Right_Encoder" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Right_Encoder_Shaft">
+    <inertial>
+      <origin
+        xyz="1.33053290607421E-15 -6.93889390390723E-17 0.01"
+        rpy="0 0 0" />
+      <mass
+        value="0.000565486677646163" />
+      <inertia
+        ixx="2.01219009462426E-08"
+        ixy="0"
+        ixz="2.43923777110234E-23"
+        iyy="2.01219009462426E-08"
+        iyz="-1.72092758554424E-26"
+        izz="2.54469004940773E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_Shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_Shaft_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Encoder_Shaft_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.033"
+      rpy="0 0 -0.034866" />
+    <parent
+      link="Right_Encoder" />
+    <child
+      link="Right_Encoder_Shaft" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Right_Encoder_Coupler">
+    <inertial>
+      <origin
+        xyz="-1.87350135405495E-16 4.31078783780237E-16 0.0122557411273485"
+        rpy="0 0 0" />
+      <mass
+        value="0.00601929152427805" />
+      <inertia
+        ixx="4.32085946695519E-07"
+        ixy="3.55687663397802E-23"
+        ixz="-1.90783876858057E-22"
+        iyy="4.32085946695519E-07"
+        iyz="4.74326771450322E-22"
+        izz="3.01768038535058E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_Coupler.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Encoder_Coupler_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Encoder_Coupler_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.039"
+      rpy="3.1416 0 -1.594" />
+    <parent
+      link="Right_Encoder_Shaft" />
+    <child
+      link="Right_Encoder_Coupler" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Right_Motor_Shaft">
+    <inertial>
+      <origin
+        xyz="0.0329232788564363 -5.76441713438861E-05 4.146848295667E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00321285894925607" />
+      <inertia
+        ixx="2.54143918564532E-08"
+        ixy="-4.70845713561842E-09"
+        ixz="-2.24226760769052E-25"
+        iyy="1.12774288289305E-06"
+        iyz="-3.27313705451804E-25"
+        izz="1.12717659926779E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor_Shaft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor_Shaft_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Motor_Shaft_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.055"
+      rpy="1.6 -1.5708 0" />
+    <parent
+      link="Right_Encoder_Coupler" />
+    <child
+      link="Right_Motor_Shaft" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Right_Wheel">
+    <inertial>
+      <origin
+        xyz="-2.67841304690819E-15 -0.0137900544107539 -2.85882428840978E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.11502952485387" />
+      <inertia
+        ixx="0.000119851353016967"
+        ixy="-2.72969876016216E-18"
+        ixz="-4.73013690932902E-16"
+        iyy="0.000215063064031778"
+        iyz="2.02352172612603E-18"
+        izz="0.000119851353017134" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Wheel_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Wheel_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 -0.43227 1.5708" />
+    <parent
+      link="Right_Motor_Shaft" />
+    <child
+      link="Right_Wheel" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+  <link
+    name="Right_Motor_Plate">
+    <inertial>
+      <origin
+        xyz="0.0142230422275223 0.0140305783109309 -6.95699236973731E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0228522301370467" />
+      <inertia
+        ixx="1.26656359081654E-05"
+        ixy="3.36042653670862E-06"
+        ixz="1.72069435167697E-21"
+        iyy="1.25927964265988E-05"
+        iyz="-4.86092998236105E-22"
+        izz="1.14147397394386E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor_Plate.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor_Plate_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Motor_Plate_Joint"
+    type="fixed">
+    <origin
+      xyz="-0.14 0 0.012"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Ground Floor" />
+    <child
+      link="Right_Motor_Plate" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Right_Motor">
+    <inertial>
+      <origin
+        xyz="-2.08906257029913E-10 -0.0342490788500104 0.0206801558865174"
+        rpy="0 0 0" />
+      <mass
+        value="0.148158669748596" />
+      <inertia
+        ixx="0.000166100474730073"
+        ixy="1.94433964723233E-11"
+        ixz="-2.59596085143326E-13"
+        iyy="8.88051318091147E-05"
+        iyz="3.88331046293827E-05"
+        izz="0.000139077222017456" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Motor_Joint"
+    type="fixed">
+    <origin
+      xyz="0.0110000000000002 0.027 0"
+      rpy="3.1415926535 -1.5707963267949 0" />
+    <parent
+      link="Right_Motor_Plate" />
+    <child
+      link="Right_Motor" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Right_Motor_Shaft_1">
+    <inertial>
+      <origin
+        xyz="0.0329232788564363 -5.76441713438861E-05 4.146848295667E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00321285894925607" />
+      <inertia
+        ixx="2.54143918564532E-08"
+        ixy="-4.70845713561842E-09"
+        ixz="-2.24226760769052E-25"
+        iyy="1.12774288289305E-06"
+        iyz="-3.27313705451804E-25"
+        izz="1.12717659926779E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor_Shaft_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://turtlebot3_pro_max123/meshes/Right_Motor_Shaft_1_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Motor_Shaft_1_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.0279999999999999"
+      rpy="0 -1.5707963267949 0" />
+    <parent
+      link="Right_Motor" />
+    <child
+      link="Right_Motor_Shaft_1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="4.9"
+      velocity="10.472" />
+  </joint>
+</robot>

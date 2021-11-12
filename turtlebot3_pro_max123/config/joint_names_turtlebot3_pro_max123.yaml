@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'Left_Encoder_Shaft_Joint', 'Left_Encoder_Coupler_Joint', 'Left_Motor_Shaft_Joint', 'Left_Wheel_Joint', 'Right_Encoder_Shaft_Joint', 'Right_Encoder_Coupler_Joint', 'Right_Motor_Shaft_Joint', 'Right_Wheel_Joint', ]
